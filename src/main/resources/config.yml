@@ -1,0 +1,101 @@
+# ==============================================================
+#                 localhost-gildie - Konfiguracja
+#       Autor: Localhost (discord: localhost_127001)
+# ==============================================================
+
+settings:
+  # Ograniczenia dlugosci TAGu gildii (np. PRO, KOSA)
+  tag-min-length: 2
+  tag-max-length: 5
+
+  # Ograniczenia dlugosci pelnej nazwy gildii
+  name-min-length: 3
+  name-max-length: 16
+
+  # Promien cuboidu terenu gildii liczony od srodka (np. 35 = teren 70x70)
+  region-radius: 35
+
+  # Minimalna odleglosc miedzy sercami dwoch gildii (w blokach)
+  min-distance-between-guilds: 80
+
+  # Minimalna odleglosc od spawnu (punktu 0,0) wymagana do zalozenia gildii
+  min-distance-from-spawn: 150
+
+  # Czas oczekiwania na teleportacje do bazy (/g baza) w sekundach
+  teleport-delay: 5
+
+  # Poczatkowa liczba zyc nowej gildii
+  default-lives: 3
+
+  # Poczatkowa liczba punktow rankingowych ELO
+  default-points: 1000
+
+  # Czas waznosci nowej gildii (w dniach)
+  validity-days: 7
+
+  # Blok Serca Gildii stawiany w centrum terenu
+  heart-block: "CRYING_OBSIDIAN"
+
+# Koszt zalozenia nowej gildii (/g zaloz)
+cost:
+  enabled: true
+  items:
+    DIAMOND: 16
+    EMERALD: 16
+    GOLD_INGOT: 16
+    IRON_INGOT: 32
+
+# Punkty rankingowe za zabojstwa
+points:
+  kill-gain: 30
+  death-loss: 20
+
+# Komunikaty
+messages:
+  prefix: "&8[&6Gildie&8] &7"
+  no-permission: "&cNie posiadasz uprawnień do tej czynności!"
+  player-only: "&cTa komenda może być wykonana tylko przez gracza!"
+  reload: "&aKonfiguracja gildii została pomyślnie przeładowana!"
+  already-in-guild: "&cPosiadasz już gildię! Aby założyć nową, musisz opuścić obecną."
+  not-in-guild: "&cNie należysz do żadnej gildii! Użyj &e/g zaloz <tag> <nazwa>&c."
+  not-leader: "&cTylko Lider gildii może wykonać tę czynność!"
+  not-officer: "&cWymagane uprawnienia Zastępcy lub Lidera gildii!"
+  tag-exists: "&cGildia o podanym tagu już istnieje!"
+  tag-invalid: "&cTag gildii musi składać się z %min%-%max% znaków alfanumerycznych!"
+  name-invalid: "&cNazwa gildii musi mieć od %min% do %max% znaków!"
+  not-enough-items: "&cDo założenia gildii brakuje Ci wymaganych przedmiotów! Sprawdź &e/g koszyk&c."
+  claim-overlap: "&cW tym miejscu nie można założyć gildii, ponieważ nachodzi na teren innej gildii!"
+  spawn-too-close: "&cJesteś zbyt blisko spawnu! Minimalna odległość to &e%dist% bloków&c."
+  created: "&aPomyślnie założono gildię &e[%tag%] &6%name%&a!"
+  created-broadcast: "&6Gracz &e%player% &6założył nową gildię &8[&e%tag%&8] &f%name%&6!"
+  disbanded: "&cGildia &e[%tag%] &czostała rozwiązana!"
+  disbanded-broadcast: "&cGildia &e[%tag%] &f%name% &czostała rozwiązana przez &e%player%&c!"
+  invited-sender: "&aWysłano zaproszenie do gildii dla gracza &e%player%&a!"
+  invited-target: "&6Otrzymałeś zaproszenie do gildii &8[&e%tag%&8] &f%name%&6! Wpisz &e/g dolacz %tag%&6, aby dołączyć."
+  already-invited: "&cTen gracz otrzymał już zaproszenie!"
+  not-invited: "&cNie posiadasz zaproszenia do gildii &e[%tag%]&c!"
+  joined: "&aPomyślnie dołączyłeś do gildii &e[%tag%]&a!"
+  joined-broadcast: "&aGracz &e%player% &adołączył do gildii &e[%tag%]&a!"
+  kicked: "&cGracz &e%player% &czostał wyrzucony z gildii!"
+  kicked-target: "&cZostałeś wyrzucony z gildii &e[%tag%]&c!"
+  left: "&cOpuściłeś gildię &e[%tag%]&c."
+  left-broadcast: "&cGracz &e%player% &copuścił szeregi gildii &e[%tag%]&c."
+  leader-cannot-leave: "&cJesteś liderem! Przed opuszczeniem musisz przekazać lidera (&e/g lider <gracz>&c) lub rozwiązać gildię (&e/g rozwiaz&c)."
+  leader-changed: "&6Nowym liderem gildii &e[%tag%] &6został &e%player%&6!"
+  pvp-enabled: "&aWłączono PvP wewnątrz gildii (Friendly Fire włączony)!"
+  pvp-disabled: "&cWyłączono PvP wewnątrz gildii (Friendly Fire wyłączony)!"
+  base-set: "&aPomyślnie ustawiono nową bazę gildii!"
+  base-must-be-in-claim: "&cBazę gildii można ustawić wyłącznie na własnym terenie!"
+  teleport-started: "&aTeleportacja do bazy za &e%time% sekund&a... Nie ruszaj się i nie odnoś obrażeń!"
+  teleport-cancelled: "&cTeleportacja przerwana z powodu ruchu lub otrzymanych obrażeń!"
+  teleport-success: "&aPomyślnie przeteleportowano do bazy gildii!"
+  territory-enter: "&aWkroczyłeś na teren gildii &8[&e%tag%&8] &f%name%&a!"
+  territory-leave: "&7Opuściłeś teren gildii &8[&e%tag%&8]&7."
+  territory-protected: "&cTen teren należy do gildii &8[&e%tag%&8] &f%name%&c!"
+  heart-protected: "&cTo jest Serce Twojej gildii! Nie możesz go zniszczyć."
+  heart-attacked: "&4&lALARM! &cSerce Twojej gildii &e[%tag%] &cjest atakowane przez gracza &e%player%&c!"
+  heart-lost-life: "&4Gildia &e[%tag%] &4straciła życie! Pozostało żyć: &c%lives%"
+  heart-conquered: "&4&lGILDIA PODBITA! &cSerce gildii &e[%tag%] &czostało zniszczone przez &e%player%&c!"
+  ally-sent: "&aWysłano propozycję sojuszu do gildii &e[%tag%]&a!"
+  ally-accepted: "&aZawarto sojusz z gildią &e[%tag%]&a!"
+  ally-broken: "&cZerwano sojusz z gildią &e[%tag%]&c!"

@@ -1,0 +1,32 @@
+name: localhost-gildie
+version: '${version}'
+
+main: pl.localhost.gildie.Main
+api-version: '1.20'
+load: POSTWORLD
+
+authors: [ Localhost ]
+website:
+  discord: localhost_127001
+
+commands:
+  gildia:
+    aliases: [g, gildie, guild]
+    description: Glowna komenda systemu gildii
+    permission: gildie.use
+  koszyk:
+    aliases: [itemy, przedmioty]
+    description: Przedmioty potrzebne na zalozenie gildii
+    permission: gildie.use
+  gadmin:
+    aliases: [ga]
+    description: Komenda administracyjna do zarzadzania gildiami
+    permission: gildie.admin
+
+permissions:
+  gildie.use:
+    description: Pozwala na korzystanie z komend gildii
+    default: true
+  gildie.admin:
+    description: Pozwala na zarzadzanie gildiami przez administracje
+    default: op
